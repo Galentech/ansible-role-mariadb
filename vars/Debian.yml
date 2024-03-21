@@ -3,11 +3,6 @@ mariadb_packages:
   - mysql-common
   - python-mysqldb
 
-custom_mariadb_packages:
-  - mariadb-server
-  - mysql-common
-  - python3-mysqldb
-
 mariadb_service: '{{ "mariadb"
                      if ("ansible_distribution_major_version" < "14")
                      else "mysql" }}'
